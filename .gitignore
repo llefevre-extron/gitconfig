@@ -1,3 +1,5 @@
 *
-!.gitignore
 !.gitconfig
+!.gitignore
+!.globalgitignore
+!README.md
