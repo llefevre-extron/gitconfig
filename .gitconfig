@@ -1,19 +1,41 @@
 [user]
     name = Louis Lefevre
     email = llefevre@extron.com
-	signingkey = 97E534B86FBF1EA429AF66791017A7F017F8C1DE
+    signingkey = 97E534B86FBF1EA429AF66791017A7F017F8C1DE
+[core]
+    editor = vim
+    autocrlf = false
+    excludesfile = ~/.globalgitignore
 [init]
     defaultBranch = master
 [credential]
     helper = store
-[web]
-    browser = google-chrome
 [gpg]
-	program = C:/Program Files/Git/usr/bin/gpg.exe
+    program = C:/Program Files/Git/usr/bin/gpg.exe
+[web]
+    browser = chrome
+[browser "chrome"]
+    path = C:/Program Files/Google/Chrome/Application/chrome.exe
+[branch]
+    sort = -committerdate
+[fetch]
+    prune = true
+    prunetags = true
 [commit]
     gpgsign = true
+    verbose = false
+[push]
+    autoSetupRemote = true
+    followtags = true
+[merge]
+    conflictstyle = diff3
+[rebase]
+    autosquash = true
 [tag]
     gpgsign = true
+    sort = taggerdate
+[log]
+    date = iso
 [color "status"]
     added = green bold
     changed = yellow bold
@@ -28,11 +50,6 @@
     old = red bold
     new = green bold
     whitespace = red reverse
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [alias]
     st = status
     cm = commit
@@ -40,6 +57,7 @@
     ad = add
     cl = clone
     pu = push
+    pl = pull
     rmr = rm -r
     amend = commit --amend --no-edit
     lsd = log --pretty=format:"%C(yellow)%h\\ \\|\\ %ad%C(reset)\\ \\-\\ %s%C(red)%d%C(reset)" --decorate --date=short
@@ -51,6 +69,6 @@
                     echo "New Date:" ${new_date}; \
                     GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
         }; f"
-	configall = config --list --show-origin
-	cmds = !gh gist view 2bf583b76ac034295cbdc52f78d827c8
-	addcmd = !gh gist edit 2bf583b76ac034295cbdc52f78d827c8
+    configall = config --list --show-origin
+    cmds = !gh gist view 2bf583b76ac034295cbdc52f78d827c8
+    addcmd = !gh gist edit 2bf583b76ac034295cbdc52f78d827c8
