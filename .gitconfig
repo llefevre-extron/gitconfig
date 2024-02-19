@@ -1,11 +1,10 @@
 [user]
     name = Louis Lefevre
     email = llefevre@extron.com
-    signingkey = 97E534B86FBF1EA429AF66791017A7F017F8C1DE
+    signingkey = AD03F2B2ABDC405FEF7D2476C8023AE956332ECF
 [core]
     editor = vim
     autocrlf = false
-    excludesfile = ~/.globalgitignore
 [init]
     defaultBranch = master
 [credential]
