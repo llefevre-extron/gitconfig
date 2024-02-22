@@ -4,11 +4,13 @@
     signingkey = AD03F2B2ABDC405FEF7D2476C8023AE956332ECF
 [core]
     editor = vim
-    autocrlf = false
+    autocrlf = true
 [init]
     defaultBranch = master
 [credential]
-    helper = store
+    helper = manager
+[credential "https://github.com"]
+    username = llefevre-extron
 [gpg]
     program = C:/Program Files/Git/usr/bin/gpg.exe
 [web]
