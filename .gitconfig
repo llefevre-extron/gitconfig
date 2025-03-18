@@ -17,6 +17,9 @@
     browser = chrome
 [browser "chrome"]
     path = C:/Program Files/Google/Chrome/Application/chrome.exe
+[git-p4]
+    user = llefevre
+    port = ssl:uk-dfd-perforce:5000
 [branch]
     sort = -committerdate
 [fetch]
@@ -61,6 +64,7 @@
     pl = pull
     rmr = rm -r
     amend = commit --amend --no-edit
+    p4 = !python.exe 'C:\\Program Files\\Git\\mingw64\\libexec\\git-core\\git-p4'
     lsd = log --pretty=format:"%C(yellow)%h\\ \\|\\ %ad%C(reset)\\ \\-\\ %s%C(red)%d%C(reset)" --decorate --date=short
     count = ! git ls-files | grep -Ev '.jpg|.png|.jar|.md|.tex|.pdf|.gitignore|LICENSE|pom.xml' | xargs wc -l
     date = "!f() { \
